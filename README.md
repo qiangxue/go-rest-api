@@ -213,8 +213,15 @@ storage (e.g. HashiCorp Vault) into environment variables in a bootstrap script 
 ## Deployment
 
 The application can be run as a docker container. You can use `make build-docker` to build the application 
-into a docker image.
+into a docker image. The docker container starts with the `cmd/server/entryscript.sh` script which reads 
+the `APP_ENV` environment variable to determine which configuration file to use. For example,
+if `APP_ENV` is `qa`, the application will be started with the `config/qa.yml` configuration file.
 
-The docker container starts with the `cmd/server/entryscript.sh` script which reads the `APP_ENV` environment 
-variable to determine which configuration file to use. For example,  if `APP_ENV` is `qa`, the application will
-be started with the `config/qa.yml` configuration file.
+You can also run `make build` to build an executable binary named `server`. Then start the API server using the following
+command,
+
+```shell
+./server -config=./config/prod.yml
+```
+
+```
