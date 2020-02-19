@@ -31,21 +31,18 @@ test-cover: test ## run unit tests and show test coverage information
 
 .PHONY: run
 run: ## run the API server
-	go run ${LDFLAGS} cmd/server/main.go & echo $$! > $(PID_FILE)
-
-.PHONY: run-stop
-run-stop: ## stop the API server
-	@pkill -P `cat $(PID_FILE)` || true
+	go run ${LDFLAGS} cmd/server/main.go
 
 .PHONY: run-restart
 run-restart: ## restart the API server
-	@make run-stop
+	@pkill -P `cat $(PID_FILE)` || true
 	@printf '%*s\n' "80" '' | tr ' ' -
 	@echo "Source file changed. Restarting server..."
-	@make run
+	@go run ${LDFLAGS} cmd/server/main.go & echo $$! > $(PID_FILE)
 	@printf '%*s\n' "80" '' | tr ' ' -
 
-run-live: run ## run the API server with live reload support (requires fswatch)
+run-live: ## run the API server with live reload support (requires fswatch)
+	@go run ${LDFLAGS} cmd/server/main.go & echo $$! > $(PID_FILE)
 	@fswatch -x -o --event Created --event Updated --event Renamed -r internal pkg cmd config | xargs -n1 -I {} make run-restart
 
 .PHONY: build
