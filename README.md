@@ -139,7 +139,7 @@ Implementing a new feature typically involves the following steps:
 
 1. Develop the service that implements the business logic supporting the feature. Please refer to `internal/album/service.go` as an example.
 2. Develop the RESTful API exposing the service about the feature. Please refer to `internal/album/api.go` as an example.
-3. Develop the repository that persists the data entities needed by the service. Please refer to `internal/album/repsitory.go` as an example.
+3. Develop the repository that persists the data entities needed by the service. Please refer to `internal/album/repository.go` as an example.
 4. Wire up the above components together by injecting their dependencies in the main function. Please refer to 
    the `album.RegisterHandlers()` call in `cmd/server/main.go`.
 
