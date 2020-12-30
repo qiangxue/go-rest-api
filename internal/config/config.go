@@ -60,5 +60,5 @@ func Load(file string, logger log.Logger) (*Config, error) {
 		return nil, err
 	}
 
-	return &c, err
+	return &c, nil
 }
