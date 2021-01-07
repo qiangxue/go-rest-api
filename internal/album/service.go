@@ -25,7 +25,7 @@ type Album struct {
 
 // CreateAlbumRequest represents an album creation request.
 type CreateAlbumRequest struct {
-	Name string `json:"name"`
+	Name string `json:"name" form:"name"`
 }
 
 // Validate validates the CreateAlbumRequest fields.
@@ -37,7 +37,7 @@ func (m CreateAlbumRequest) Validate() error {
 
 // UpdateAlbumRequest represents an album update request.
 type UpdateAlbumRequest struct {
-	Name string `json:"name"`
+	Name string `json:"name" form:"name"`
 }
 
 // Validate validates the CreateAlbumRequest fields.

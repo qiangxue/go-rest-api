@@ -15,8 +15,8 @@ func RegisterHandlers(rg *routing.RouteGroup, service Service, logger log.Logger
 func login(service Service, logger log.Logger) routing.Handler {
 	return func(c *routing.Context) error {
 		var req struct {
-			Username string `json:"username"`
-			Password string `json:"password"`
+			Username string `json:"username" form:"username"`
+			Password string `json:"password" form:"password"`
 		}
 
 		if err := c.Read(&req); err != nil {
