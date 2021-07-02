@@ -3,11 +3,12 @@ package log
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/google/uuid"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"go.uber.org/zap/zaptest/observer"
-	"net/http"
 )
 
 // Logger is a logger that supports log levels, context and structured logging.

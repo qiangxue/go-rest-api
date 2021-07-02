@@ -3,11 +3,12 @@ package log
 import (
 	"bytes"
 	"context"
-	"github.com/stretchr/testify/assert"
-	"go.uber.org/zap"
 	"net/http"
 	"reflect"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
+	"go.uber.org/zap"
 )
 
 func TestNew(t *testing.T) {

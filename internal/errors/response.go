@@ -1,9 +1,10 @@
 package errors
 
 import (
-	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"net/http"
 	"sort"
+
+	validation "github.com/go-ozzo/ozzo-validation/v4"
 )
 
 // ErrorResponse is the response that represents an error.

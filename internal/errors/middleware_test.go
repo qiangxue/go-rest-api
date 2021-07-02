@@ -3,13 +3,14 @@ package errors
 import (
 	"database/sql"
 	"fmt"
+	"net/http"
+	"net/http/httptest"
+	"testing"
+
 	routing "github.com/go-ozzo/ozzo-routing/v2"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/qiangxue/go-rest-api/pkg/log"
 	"github.com/stretchr/testify/assert"
-	"net/http"
-	"net/http/httptest"
-	"testing"
 )
 
 func TestHandler(t *testing.T) {

@@ -3,10 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/qiangxue/go-rest-api/pkg/log"
-	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"
+
+	"github.com/qiangxue/go-rest-api/pkg/log"
+	"github.com/stretchr/testify/assert"
 )
 
 func Test_logDBQuery(t *testing.T) {

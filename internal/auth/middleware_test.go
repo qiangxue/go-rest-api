@@ -2,11 +2,12 @@ package auth
 
 import (
 	"context"
+	"net/http"
+	"testing"
+
 	"github.com/dgrijalva/jwt-go"
 	"github.com/qiangxue/go-rest-api/internal/test"
 	"github.com/stretchr/testify/assert"
-	"net/http"
-	"testing"
 )
 
 func TestCurrentUser(t *testing.T) {

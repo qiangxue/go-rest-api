@@ -1,11 +1,12 @@
 package config
 
 import (
-	"github.com/go-ozzo/ozzo-validation/v4"
+	"io/ioutil"
+
+	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/qiangxue/go-env"
 	"github.com/qiangxue/go-rest-api/pkg/log"
 	"gopkg.in/yaml.v2"
-	"io/ioutil"
 )
 
 const (

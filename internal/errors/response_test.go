@@ -2,10 +2,11 @@ package errors
 
 import (
 	"fmt"
-	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/stretchr/testify/assert"
 	"net/http"
 	"testing"
+
+	validation "github.com/go-ozzo/ozzo-validation/v4"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestErrorResponse_Error(t *testing.T) {

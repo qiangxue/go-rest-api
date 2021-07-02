@@ -1,12 +1,13 @@
 package accesslog
 
 import (
-	routing "github.com/go-ozzo/ozzo-routing/v2"
-	"github.com/qiangxue/go-rest-api/pkg/log"
-	"github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	routing "github.com/go-ozzo/ozzo-routing/v2"
+	"github.com/qiangxue/go-rest-api/pkg/log"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestHandler(t *testing.T) {

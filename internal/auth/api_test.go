@@ -2,11 +2,12 @@ package auth
 
 import (
 	"context"
+	"net/http"
+	"testing"
+
 	"github.com/qiangxue/go-rest-api/internal/errors"
 	"github.com/qiangxue/go-rest-api/internal/test"
 	"github.com/qiangxue/go-rest-api/pkg/log"
-	"net/http"
-	"testing"
 )
 
 type mockService struct{}
