@@ -35,4 +35,4 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: algan/belajar-cicd:latest
+        tags: algan/go-rest-api:latest
