@@ -45,6 +45,10 @@ run-live: ## run the API server with live reload support (requires fswatch)
 	@go run ${LDFLAGS} cmd/server/main.go & echo $$! > $(PID_FILE)
 	@fswatch -x -o --event Created --event Updated --event Renamed -r internal pkg cmd config | xargs -n1 -I {} make run-restart
 
+.PHONY: tidy
+tidy: ## add/remove dependanices
+	@go mod tidy
+
 .PHONY: build
 build:  ## build the API server binary
 	CGO_ENABLED=0 go build ${LDFLAGS} -a -o server $(MODULE)/cmd/server
